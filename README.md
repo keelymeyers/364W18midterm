@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SI 364 - Winter 2018 - Midterm Assignment
 
 ## App Description
