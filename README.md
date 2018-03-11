@@ -50,6 +50,3 @@ My app is related to Yelp business reviews. It has multiple functions:
 * An access key for the Yelp API is required. I have left an empty string in the file yelp_access.py to input the access key, and have provided my key in the submission comments on Canvas.
 * The custom validator for searching businesses on Yelp validates the zip code (as Yelp search terms are not case sensitive and are forgiving in regards to punctuation, etc.), which is similar to code from Discussion Week 5 
 
-=======
-# 364W18midterm
->>>>>>> 7a6198656169bda55916fe06ac1cef04efe87d5a
