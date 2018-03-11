@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Business Reviews Searched</h2>
+
+<ul>
+{% for n in names %}
+
+    <li>{{ n[0] }}</li>
+    <ul>
+    	<li>Rating: {{ n[1] }}</li>
+    	<li>Price: {{ n[2] }}</li>
+    	<li>Reviews</li><ul>
+    	{% for nam in n[3] %}
+    		<li>{{ nam }}</li>
+    	{% endfor %}</ul>
+</ul>
+{% endfor %}
+
+
+{% endblock %}

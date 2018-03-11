@@ -1,0 +1,12 @@
+<h1>Welcome!</h1><h2>Search Yelp Business Reviews or Write Your Own</h2>
+<li><a href="{{ url_for('home')}}">Yelp Form</a></li>
+<li><a href="{{ url_for('all_yelp_reviews')}}">See All Reviews Searched For</a></li>
+<li><a href="{{ url_for('user_form')}}">Write Your Own Review</a></li>
+<li><a href="{{ url_for('see_all_user_reviews')}}">See Your Reviews</a></li><br>
+
+
+
+{% block content %}
+{% endblock %}
+
+

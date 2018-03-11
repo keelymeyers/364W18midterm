@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Write Your Own Review</h2>
+<form action="{{ url_for('show_review') }}" method="GET">
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.rating.label()}}{{ form.rating() }}<br>
+    {{ form.review.label()}}{{ form.review() }}<br>
+
+
+    {{ form.submit() }}
+    {% if get_flashed_messages() %}
+	{% for message in get_flashed_messages() %} 
+	{{ message['rating'] }} 
+	{% endfor %}
+	{% endif %}
+</form>
+
+{% endblock %}

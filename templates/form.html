@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('home') }}" method="POST">
+
+    {{ form.name.label() }}{{ form.name() }}<br>
+    {{ form.location.label()}}{{ form.location() }}<br>
+
+    {{ form.submit() }}<br>
+
+    {{ form.hidden_tag() }}
+	{% if get_flashed_messages() %}
+	{% for message in get_flashed_messages() %} 
+	{{ message['location'] }} 
+	{% endfor %}
+	{% endif %}
+</form>
+
+{% if newbusiness %}
+	<h2>Results for {{ business }}:</h2>
+	<ul>
+		<li>Price: {{ price }}</li>
+		<li>Rating: {{ rating }}</li>
+	</ul>
+	<h3>Top 3 Yelp Reviews:</h3>
+	<ul>
+	{% for each in reviews %}
+    	<li>{{ each }}</li>
+	{% endfor %}
+{% endif %}
+
+{% endblock %}

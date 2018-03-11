@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h2>Thanks for your review of {{ business_reviewed }}!</h2>
+<p>Your review:<p>
+<ul>
+	<li>Rating: {{ rating }}</li> 
+	<li>Review: {{ review }}</li>
+</ul>
+{{ form.hidden_tag() }}
+
+{% endblock %}
